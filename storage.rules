@@ -1,0 +1,16 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // قواعد أكثر تساهلاً للتطوير والاختبار
+    match /task_images/{taskId}/{imageId} {
+      // السماح بالقراءة والكتابة للجميع خلال مرحلة التطوير
+      allow read, write: if true;
+    }
+    
+    // قاعدة عامة للسماح بالوصول إلى جميع المسارات الأخرى
+    match /{allPaths=**} {
+      // السماح بالقراءة والكتابة للجميع خلال مرحلة التطوير
+      allow read, write: if true;
+    }
+  }
+}
