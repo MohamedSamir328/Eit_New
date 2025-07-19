@@ -1,0 +1,42 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "elevatorsitracker",
+          "appId": "1:251675361398:android:2477257526d6db4aa61f57",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "elevatorsitracker",
+          "configurations": {
+            "android": "1:251675361398:android:2477257526d6db4aa61f57",
+            "ios": "1:251675361398:ios:b3ab2f269e5a080fa61f57",
+            "macos": "1:251675361398:ios:b3ab2f269e5a080fa61f57",
+            "web": "1:251675361398:web:eef61bb4e3e52cc4a61f57",
+            "windows": "1:251675361398:web:d8a0d28f7935375da61f57"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
